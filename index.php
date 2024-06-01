@@ -87,11 +87,11 @@
                         </div>
                         <br>
                         <div class="text-end">
-                          <button type="button" id="btnBuscar" class="btn btn-primary btnBuscar" data-curso="<?php echo $idcursete; ?>">Consultar</button>
+                          <button type="button" id="btnBuscar" class="btn btn-primary btnBuscar" data-curso="<?php echo $character['codigo']; ?>">Consultar</button>
                         </div>
                       </form>
                     </div>
-                    <div id="resultado"></div>
+                    <div id="resultado-<?php echo $character['codigo']; ?>"></div>
                     <input type="hidden" id="idmaster" name="idmaster" value="99">
                     <hr>
                     <div id="acciones-<?php echo $character['codigo']; ?>" style="display: none;">

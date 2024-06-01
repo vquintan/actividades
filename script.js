@@ -22,8 +22,8 @@ $(document).ready(function() {
           console.log(response);
 
           // Encontrar el elemento #resultado correspondiente al botón clickeado
-          var $resultadoDiv = $this.closest('td').find('#resultado');
-
+          var $resultadoDiv = $this.closest('td').find('#resultado-' + cursoId);
+		  //var $resultadoDiv = $('#resultado-' + cursoId);
           // Actualizar el contenido del elemento #resultado
           $resultadoDiv.html(response);
 
@@ -38,7 +38,8 @@ $(document).ready(function() {
 
 		// Función para imprimir las actividades seleccionadas en la consola
 		function imprimirActividadesSeleccionadas() {
-		  $resultadoDiv.find('input[type="checkbox"]:checked').each(function() {
+			var cursoId = $this.data('curso');
+			$('#resultado-' + cursoId).find('input[type="checkbox"]:checked').each(function() {
 			var actividad_id = $(this).val();
 			var fecha = $(this).data('fecha');
 			var hora = $(this).data('hora');
